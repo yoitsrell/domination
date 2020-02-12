@@ -57,17 +57,21 @@ function turnInvis(element){ //create function that gives class invisible
 
 turnInvis('#thing-1')
 
-function changeFontSize(sizeFont, id){ //create function with fontsize and id that can change font size on any text
-
+function changeFontSize(size, id){ //create function with fontsize and id that can change font size on any text
+    const element = document.querySelector('#' + id)
+    element.style.fontSize = size
 }
 
+changeFontSize()
 
 
-
-function addText(){
-    const newLi = document.createElement('LI')
-    newLi = ''.innerText
+function addText(text){
+    const newLi = document.createElement('li')
+    newLi.innerText = text
+    return newLi
 }
+
+const newLi = addText('HELLO EVERYBODY')
 
 // addImage(addText)
 
@@ -76,3 +80,13 @@ function addText(){
 //     document.body.appendChild(h)
 //     const 
 // }
+function makeHeader(size, text) {
+    const header = document.createElement('h' + size)
+    header.innerText = text
+
+    return header
+}
+
+const header = makeHeader(5, 'Look')
+appendToArguments(header)
+
