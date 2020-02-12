@@ -29,20 +29,19 @@ erase()
 
 
 
-function appendUl(element){ //create function that appends to arguments
-    document.querySelector('#arguments').appendChild(element)
-}
-
-
-function createImgEl(img){
-const newImg = document.createElement(img)
-}
-
+// function appendUl(element){ //create function that appends to arguments
+//     document.querySelector('#arguments').appendChild(element)
+// }
 
 function addImage(url){ //add image and pass it thru function
-    const newImage = document.createElement(img)
+    const newImage = document.createElement('img') //used url instead of img, didn't work
     newImage.src = url
-} 
+    document.querySelector('#arguments').appendChild(newImage)
+}
+
+
+addImage('https://i.pinimg.com/originals/ee/9a/0f/ee9a0f4d2d8845ad0e773fb2567d79fe.jpg')
+addImage('https://i.imgflip.com/1r1zl8.jpg')
 
 function picSize(id){ //change height of picture
     const picSize = document.querySelector('#' + id)
@@ -57,3 +56,23 @@ function turnInvis(element){ //create function that gives class invisible
 }
 
 turnInvis('#thing-1')
+
+function changeFontSize(sizeFont, id){ //create function with fontsize and id that can change font size on any text
+
+}
+
+
+
+
+function addText(){
+    const newLi = document.createElement('LI')
+    newLi = ''.innerText
+}
+
+// addImage(addText)
+
+// function headerText(header, text){
+//     const addHeader = document.createElement(header)
+//     document.body.appendChild(h)
+//     const 
+// }
